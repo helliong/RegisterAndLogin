@@ -21,7 +21,7 @@ if (empty($login) || empty($pass) || empty($repeatPass) || empty($email)) {
 } elseif (strlen($pass) > 20 || strlen($login) > 20 || strlen($email) > 50) {
     die("Login, password, and email must not exceed their respective length limits.");
 } else {
-    // Проверка на занятый логин
+    
     $checkLoginSql = "SELECT * FROM `user` WHERE login = '$login'";
     $loginResult = $conn->query($checkLoginSql);
 
@@ -29,7 +29,7 @@ if (empty($login) || empty($pass) || empty($repeatPass) || empty($email)) {
         die("Логин уже занят.");
     }
 
-    // Проверка на занятую почту
+    
     $checkEmailSql = "SELECT * FROM `user` WHERE email = '$email'";
     $emailResult = $conn->query($checkEmailSql);
 
