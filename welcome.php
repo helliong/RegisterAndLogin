@@ -40,9 +40,9 @@
         ?>
         <h2>Welcome, <span class="red-login"><?php echo htmlspecialchars($login); ?></span>!</h2>
         <?php
-        // Получаем случайную картинку с TheCatAPI
+     
         $catApiUrl = "https://api.thecatapi.com/v1/images/search";
-        $catImg = "https://cdn2.thecatapi.com/images/MTY3ODIyMQ.jpg"; // запасная картинка
+        $catImg = "https://cdn2.thecatapi.com/images/MTY3ODIyMQ.jpg"; 
 
         $response = @file_get_contents($catApiUrl);
         if ($response !== false) {
